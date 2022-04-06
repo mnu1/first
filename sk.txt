@@ -1,0 +1,56 @@
+package Assignement12;
+import java.util.ArrayList;
+import java.util.*;
+class Employee
+{
+	int empId;
+	String empName;
+	String doJ;  
+	String grade;
+	int salary;
+	
+	Employee(int empId,String empName,String doJ,String grade,int salary) 
+			{
+		     this.empId=empId;
+		     this.empName=empName;
+		     this.doJ=doJ;
+		     this.grade=grade;
+		     this.salary=salary;
+			}
+	
+}
+public class main {
+public static void main(String arg[])
+{
+	Scanner sc=new Scanner(System.in);
+	
+	
+	Employee obj=new Employee(1,"munish","21/02/2022","A",22000);
+	Employee obj1=new Employee(2,"maanoj","10/02/2022","B",22000);
+	Employee obj2=new Employee(3,"raajan","21/02/2022","A",22000);
+	Employee obj3=new Employee(4,"shilpa","19/01/2022","B",22000);
+	ArrayList<Employee> ar=new ArrayList<Employee>();
+	ar.add(obj);
+	ar.add(obj1);
+	ar.add(obj2);
+	ar.add(obj3);
+	
+	
+
+Iterator i=ar.iterator();
+System.out.println("S.no  Name  DOJ       Grade  salary ");
+while(i.hasNext())
+{
+	Employee e;
+	e=(Employee)i.next();
+	System.out.println(e.empId+ "   "+e.empName+"  "+e.doJ+' '+"  " + e.grade+"   "+e.salary);
+}
+
+
+
+}
+
+
+}
+	
+	
